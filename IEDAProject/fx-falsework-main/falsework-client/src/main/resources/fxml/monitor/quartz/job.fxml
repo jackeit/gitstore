@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="5.0">
+                    <children>
+                        <JFXTextField fx:id="searchField" promptText="任务名称" />
+                        <JFXComboBox fx:id="jobGroupComboBox" promptText="任务组">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <Label>所有</Label>
+                                    <Label>默认</Label>
+                                    <Label>系统</Label>
+                                </FXCollections>
+                            </items>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="jobStatusCommboBox" promptText="任务状态">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <Label>所有</Label>
+                                    <Label>正常</Label>
+                                    <Label>暂停</Label>
+                                </FXCollections>
+                            </items>
+                        </JFXComboBox>
+                        <JFXButton fx:id="searchButton" text="搜索" />
+                        <JFXButton fx:id="resetButton" text="重置" />
+                        <JFXButton fx:id="addJobButton" text="新增" />
+                        <JFXButton fx:id="jobLogButton" text="日志" />
+                    </children>
+                </HBox>
+                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="jobIdColumn" maxWidth="45.0" minWidth="40.0" prefWidth="45.0" text="序号" />
+                                <TableColumn fx:id="jobNameColumn" prefWidth="75.0" text="任务名称" />
+                                <TableColumn fx:id="jobGroupNameColumn" prefWidth="75.0" text="任务分组" />
+                                <TableColumn fx:id="jobClassColumn" prefWidth="75.0" text="调用目标字符串" />
+                                <TableColumn fx:id="jobDataColumn" prefWidth="75.0" text="调用参数" />
+                                <TableColumn fx:id="jobTimeColumn" prefWidth="75.0" text="执行表达式" />
+                                <TableColumn fx:id="jobStatusColumn" maxWidth="80.0" minWidth="80.0" text="任务状态" />
+                                <TableColumn fx:id="operatingColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="操作" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <JFXDialog fx:id="dialog" overlayClose="false">
+            <JFXDialogLayout>
+                <heading>
+                    <Label fx:id="dialogTitle">JFoenix Dialog</Label>
+                </heading>
+                <body>
+                    <fx:include source="job_detail.fxml" />
+                </body>
+                <actions>
+                    <JFXProgressBar fx:id="elementProgressBar" managed="false" maxWidth="1.7976931348623157E308" prefWidth="320" visible="false">
+                    </JFXProgressBar>
+                    <HBox fx:id="operatButPane">
+                        <JFXButton fx:id="updateButton" buttonType="RAISED" text="更新" />
+                        <JFXButton fx:id="saveButton" buttonType="RAISED" text="保存" />
+                    </HBox>
+
+                    <JFXButton fx:id="cancelButton" buttonType="RAISED" text="取消" />
+                </actions>
+            </JFXDialogLayout>
+        </JFXDialog>
+    </children>
+
+</StackPane>

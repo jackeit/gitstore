@@ -1,0 +1,62 @@
+/*******************************************************************************
+ *                                                                             *
+ * login                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+#login-title {
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #3e3e3e;
+    -fx-font-size: 30px;
+
+}
+
+#login-error-label {
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #f56363;
+    -fx-font-size: 14px;
+
+}
+
+#login-welcome-title {
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 100;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 45px;
+}
+
+#login-prompt {
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 100;
+    -fx-text-fill: #7a7a7a;
+    -fx-font-size: 12px;
+}
+
+#login-welcome-text {
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 100;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+}
+
+#login-text-field {
+    -fx-background-color: transparent;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 100;
+    -fx-font-size: 18px;
+    -fx-text-fill: -fx-light-text-color;
+    -fx-prompt-text-fill: #70665e;
+    -fx-alignment: top-left;
+    -jfx-focus-color: #0355a7;
+    -jfx-unfocus-color: -fx-light-text-color;
+}
+
+#login-text-field:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+#login-svg-glyph{
+    -jfx-size: 20px;
+    -fx-background-color: #70665e;
+}

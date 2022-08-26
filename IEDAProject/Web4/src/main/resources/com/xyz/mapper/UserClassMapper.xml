@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyz.mapper.UserClassMapper">
+    <select id="getUserClasses" resultType="com.xyz.mybatistest.UserClassName">
+        /*UserClassName中的className和数据库中的class名字不同，
+          mybatis会尝试把名字相同的数据填充到要返回的数据中*/
+        select class className,id from classes;
+    </select>
+<!--    <select id="getclassHashMap" resultType="java.util.HashMap">-->
+<!--        select class className,id from classes;-->
+<!--    </select>-->
+</mapper>

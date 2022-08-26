@@ -1,0 +1,59 @@
+Manifest-Version: 1.0
+Main-Class: com.fx.client.AppStartup
+Class-Path: . libs/kotlin-compiler-1.0.6.jar libs/datafx-flow-8.0.2-SNAP
+ SHOT.jar libs/jersey-apache-client4-1.19.1.jar libs/HikariCP-java7-2.4.
+ 13.jar libs/hystrix-core-1.5.18.jar libs/spring-boot-starter-web-2.4.1.
+ jar libs/HikariCP-3.4.5.jar libs/netflix-statistics-0.1.1.jar libs/comm
+ ons-lang3-3.4.jar libs/datafx-core-8.0.2-SNAPSHOT.jar libs/spring-boot-
+ starter-websocket-2.4.1.jar libs/jersey-core-1.19.1.jar libs/tilesfx-1.
+ 6.8.jar libs/spring-beans-5.3.2.jar libs/javax.inject-1.jar libs/spring
+ -boot-starter-security-2.4.1.jar libs/spring-expression-5.2.11.RELEASE.
+ jar libs/spring-websocket-5.3.2.jar libs/c3p0-0.9.5.4.jar libs/spring-w
+ ebmvc-5.3.2.jar libs/logback-classic-1.1.7.jar libs/spring-boot-autocon
+ figure-1.5.12.RELEASE.jar libs/jackson-databind-2.10.0.pr3.jar libs/rib
+ bon-httpclient-2.2.0.jar libs/spring-boot-starter-tomcat-2.4.1.jar libs
+ /spring-web-5.3.2.jar libs/feign-jackson-10.9.jar libs/httpclient-4.2.1
+ .jar libs/junit-4.12.jar libs/mybatis-3.5.6.jar libs/spring-tx-5.3.2.ja
+ r libs/spring-messaging-5.3.2.jar libs/javafx-graphics-11.0.2.jar libs/
+ javafx-base-11.0.2-mac.jar libs/spring-context-support-5.3.2.jar libs/d
+ atafx-eventsystem-8.0.2-SNAPSHOT.jar libs/javafx-base-11.0.2.jar libs/p
+ agehelper-spring-boot-autoconfigure-1.2.5.jar libs/slf4j-api-1.7.21.jar
+  libs/javassist-3.18.1-GA.jar libs/commons-logging-1.1.1.jar libs/mysql
+ -connector-java-8.0.20.jar libs/jakarta.el-3.0.3.jar libs/jackson-modul
+ e-parameter-names-2.11.3.jar libs/spring-boot-starter-cache-2.4.1.jar l
+ ibs/spring-security-web-5.4.2.jar libs/jul-to-slf4j-1.7.30.jar libs/spr
+ ing-security-config-5.4.2.jar libs/spring-boot-2.4.1.jar libs/pagehelpe
+ r-5.1.4.jar libs/ikonli-javafx-2.4.0.jar libs/spring-boot-starter-loggi
+ ng-2.4.1.jar libs/spring-jcl-5.3.2.jar libs/servo-core-0.10.1.jar libs/
+ jackson-core-2.10.0.pr3.jar libs/log4j-to-slf4j-2.13.3.jar libs/hamcres
+ t-core-1.3.jar libs/spring-jdbc-5.3.1.jar libs/log4j-api-2.13.3.jar lib
+ s/jakarta.annotation-api-1.3.5.jar libs/mchange-commons-java-0.2.15.jar
+  libs/javafx-controls-11.0.2-mac.jar libs/jackson-datatype-jdk8-2.11.3.
+ jar libs/archaius-core-0.7.6.jar libs/pinyin4j-2.5.0.jar libs/mybatis-s
+ pring-boot-autoconfigure-2.1.4.jar libs/commons-configuration-1.8.jar l
+ ibs/tomcat-embed-core-9.0.41.jar libs/jsr305-3.0.1.jar libs/snakeyaml-1
+ .27.jar libs/commons-codec-1.6.jar libs/druid-1.1.14.jar libs/feign-rib
+ bon-10.9.jar libs/spring-boot-starter-2.4.1.jar libs/spring-core-5.3.2.
+ jar libs/okio-1.17.2.jar libs/ikonli-core-2.4.0.jar libs/jjwt-0.7.0.jar
+  libs/rxjava-1.2.0.jar libs/DmJdbcDriver-1.0.0.jar libs/guava-16.0.1.ja
+ r libs/okhttp-3.14.6.jar libs/druid-spring-boot-starter-1.1.14.jar libs
+ /datafx-injection-8.0.2-SNAPSHOT.jar libs/mybatis-spring-boot-starter-2
+ .1.4.jar libs/spring-boot-starter-jdbc-2.4.0.jar libs/ribbon-core-2.3.0
+ .jar libs/logback-core-1.1.7.jar libs/feign-okhttp-10.9.jar libs/pagehe
+ lper-spring-boot-starter-1.2.5.jar libs/ikonli-fontawesome5-pack-2.4.0.
+ jar libs/feign-slf4j-10.9.jar libs/netflix-commons-util-0.1.1.jar libs/
+ fontawesomefx-8.9.jar libs/Java-WebSocket-1.5.1.jar libs/HdrHistogram-2
+ .1.9.jar libs/javafx-controls-11.0.2.jar libs/jersey-client-1.19.1.jar 
+ libs/spring-aop-5.3.2.jar libs/tomcat-embed-websocket-9.0.41.jar libs/c
+ ontrolsfx-11.0.3.jar libs/spring-context-5.3.2.jar libs/javafx-media-11
+ .0.2-mac.jar libs/jsr311-api-1.1.1.jar libs/jfoenix-9.0.10.jar libs/jsq
+ lparser-1.0.jar libs/spring-boot-starter-quartz-2.4.1.jar libs/annotati
+ ons-2.0.0.jar libs/ribbon-loadbalancer-2.3.0.jar libs/mybatis-spring-2.
+ 0.6.jar libs/spring-security-core-5.4.2.jar libs/commons-lang-2.6.jar l
+ ibs/commons-collections-3.2.1.jar libs/servo-internal-0.10.1.jar libs/f
+ eign-core-10.9.jar libs/feign-hystrix-10.9.jar libs/httpcore-4.2.1.jar 
+ libs/javafx-graphics-11.0.2-mac.jar libs/joda-time-2.10.1.jar libs/lomb
+ ok-1.18.16.jar libs/quartz-2.3.2.jar libs/jackson-annotations-2.10.0.pr
+ 3.jar libs/jackson-datatype-jsr310-2.11.3.jar libs/javafx-media-11.0.2.
+ jar libs/spring-boot-starter-json-2.4.1.jar
+

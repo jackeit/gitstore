@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fx.server.mapper.GateLogMapper">
+    <resultMap id="BaseResultMap" type="com.fx.server.entity.log.GateLog">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="menu" jdbcType="VARCHAR" property="menu"/>
+        <result column="opt" jdbcType="VARCHAR" property="opt"/>
+        <result column="uri" jdbcType="VARCHAR" property="uri"/>
+        <result column="crt_time" jdbcType="TIMESTAMP" property="crtTime"/>
+        <result column="crt_user" jdbcType="VARCHAR" property="crtUser"/>
+        <result column="crt_name" jdbcType="VARCHAR" property="crtName"/>
+        <result column="crt_host" jdbcType="VARCHAR" property="crtHost"/>
+        <result column="body" jdbcType="VARCHAR" property="body"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, menu, opt, uri, crt_time, crt_user, crt_name, crt_host, body
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from gate_log
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from gate_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.fx.server.entity.log.GateLog"
+            useGeneratedKeys="true">
+    insert into gate_log (menu, opt, uri, 
+      crt_time, crt_user, crt_name, 
+      crt_host, body)
+    values (#{menu,jdbcType=VARCHAR}, #{opt,jdbcType=VARCHAR}, #{uri,jdbcType=VARCHAR}, 
+      #{crtTime,jdbcType=TIMESTAMP}, #{crtUser,jdbcType=VARCHAR}, #{crtName,jdbcType=VARCHAR}, 
+      #{crtHost,jdbcType=VARCHAR}, #{body,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.fx.server.entity.log.GateLog"
+            useGeneratedKeys="true">
+        insert into gate_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="menu != null">
+                menu,
+            </if>
+            <if test="opt != null">
+                opt,
+            </if>
+            <if test="uri != null">
+                uri,
+            </if>
+            <if test="crtTime != null">
+                crt_time,
+            </if>
+            <if test="crtUser != null">
+                crt_user,
+            </if>
+            <if test="crtName != null">
+                crt_name,
+            </if>
+            <if test="crtHost != null">
+                crt_host,
+            </if>
+            <if test="body != null">
+                body,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="menu != null">
+                #{menu,jdbcType=VARCHAR},
+            </if>
+            <if test="opt != null">
+                #{opt,jdbcType=VARCHAR},
+            </if>
+            <if test="uri != null">
+                #{uri,jdbcType=VARCHAR},
+            </if>
+            <if test="crtTime != null">
+                #{crtTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="crtUser != null">
+                #{crtUser,jdbcType=VARCHAR},
+            </if>
+            <if test="crtName != null">
+                #{crtName,jdbcType=VARCHAR},
+            </if>
+            <if test="crtHost != null">
+                #{crtHost,jdbcType=VARCHAR},
+            </if>
+            <if test="body != null">
+                #{body,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.fx.server.entity.log.GateLog">
+        update gate_log
+        <set>
+            <if test="menu != null">
+                menu = #{menu,jdbcType=VARCHAR},
+            </if>
+            <if test="opt != null">
+                opt = #{opt,jdbcType=VARCHAR},
+            </if>
+            <if test="uri != null">
+                uri = #{uri,jdbcType=VARCHAR},
+            </if>
+            <if test="crtTime != null">
+                crt_time = #{crtTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="crtUser != null">
+                crt_user = #{crtUser,jdbcType=VARCHAR},
+            </if>
+            <if test="crtName != null">
+                crt_name = #{crtName,jdbcType=VARCHAR},
+            </if>
+            <if test="crtHost != null">
+                crt_host = #{crtHost,jdbcType=VARCHAR},
+            </if>
+            <if test="body != null">
+                body = #{body,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.fx.server.entity.log.GateLog">
+    update gate_log
+    set menu = #{menu,jdbcType=VARCHAR},
+      opt = #{opt,jdbcType=VARCHAR},
+      uri = #{uri,jdbcType=VARCHAR},
+      crt_time = #{crtTime,jdbcType=TIMESTAMP},
+      crt_user = #{crtUser,jdbcType=VARCHAR},
+      crt_name = #{crtName,jdbcType=VARCHAR},
+      crt_host = #{crtHost,jdbcType=VARCHAR},
+      body = #{body,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+    <select id="selectPage" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from gate_log
+        <where>
+            <if test="keyId != null">
+                and crt_name like #{keyId,jdbcType=VARCHAR} or crt_host like #{keyId,jdbcType=VARCHAR}
+            </if>
+        </where>
+        ORDER BY id DESC
+    </select>
+</mapper>

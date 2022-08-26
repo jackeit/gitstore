@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="waring" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/app-dark.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.test.Test">
+   <children>
+      <JFXButton layoutX="308.0" layoutY="39.0" styleClass="waringbut" />
+   </children>
+</AnchorPane>

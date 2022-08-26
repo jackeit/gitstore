@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fx.server.mapper.RsaKeyMapper">
+  <resultMap id="BaseResultMap" type="com.fx.server.entity.RsaKey">
+    <id column="RSA_KEY" jdbcType="VARCHAR" property="key" />
+    <result column="KEY_VALUE" jdbcType="VARCHAR" property="value" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    RSA_KEY, KEY_VALUE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from base_rsa_key
+    where RSA_KEY = #{key,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from base_rsa_key
+    where RSA_KEY = #{key,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.fx.server.entity.RsaKey">
+    insert into base_rsa_key (RSA_KEY, KEY_VALUE)
+    values (#{key,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fx.server.entity.RsaKey">
+    insert into base_rsa_key
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="key != null">
+        RSA_KEY,
+      </if>
+      <if test="value != null">
+        KEY_VALUE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="key != null">
+        #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        #{value,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fx.server.entity.RsaKey">
+    update base_rsa_key
+    <set>
+      <if test="value != null">
+        KEY_VALUE = #{value,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where RSA_KEY = #{key,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fx.server.entity.RsaKey">
+    update base_rsa_key
+    set VALUE = #{value,jdbcType=VARCHAR}
+    where RSA_KEY = #{key,jdbcType=VARCHAR}
+  </update>
+</mapper>
